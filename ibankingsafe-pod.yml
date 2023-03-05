@@ -5,11 +5,14 @@ metadata:
 spec:
   containers:
     - name: ibankingsafecontainer
-      image: mgmbcssantosh86/ibankingsafe:1.0
+      image: mgmbcssantosh86/ibankingdafe:1.0
       resources:
-      limits:
-        memory: "128Mi"
-        cpu: "500m"
+        requests:
+          cpu: "1"
+          memory: 512Mi
+        limits:
+          cpu: "1"
+          memory: 1024Mi
       ports:
         - name: tomcatport
           containerPort: 8082
