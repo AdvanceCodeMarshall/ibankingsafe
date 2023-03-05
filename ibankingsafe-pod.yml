@@ -37,3 +37,8 @@ spec:
             secretKeyRef:
               name: ibankingsafesecret
               key: password
+        - name: "db.password"
+          valueFrom:
+            secretKeyRef:
+              name: ibankingsafesecret
+              key: password
